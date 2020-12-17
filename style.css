@@ -23,13 +23,14 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
       /* Chrome */ 
 }
 
-/*----NAVBAR----*/
 .mibg-oscuro{
     background-color: var(--oscuro);
 }
 .tx-claro{
     color: var(--blanco);
 }
+
+/*----NAVBAR----*/
 .navbar-dark .navbar-nav .nav-link {
     color: var(--naranja);
 }
@@ -79,3 +80,12 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 /*----FIN TRABAJOS----*/
+
+/*----CONTACTO----*/
+
+.map-contacto{
+    object-fit: cover;
+    width: 100%;
+}
+
+/*----FIN CONTACTO----*/
