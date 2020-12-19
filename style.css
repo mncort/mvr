@@ -136,4 +136,17 @@ footer .nav-link:hover{
     text-transform: uppercase;
 }
 
+.fab{
+
+    font-size: 2rem;
+    color: var(--blanco);
+
+}
+.fab:hover{
+
+    cursor: pointer;
+    color: var(--naranja);
+
+}
+
 /*----FIN FOOTER----*/
