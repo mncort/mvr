@@ -42,10 +42,16 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 /*----NAVBAR----*/
 .navbar-dark .navbar-nav .nav-link {
     color: var(--blanco);
+    font-family: 'Lato', sans-serif;
 }
+
 .navbar-dark .navbar-nav .nav-link:hover{
     color: var(--naranja);
-    text-transform: uppercase;
+}
+.separator{
+    text-decoration: none;
+    margin: auto;
+    color: var(--naranja);
 }
 .navbar-dark .navbar-toggler{
     border-color: var(--oscuro);
@@ -63,6 +69,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .logo{
     height: 2rem;
 }
+
 /*----FIN NAVBAR----*/
 
 /*----SLIDE----*/
@@ -133,7 +140,6 @@ footer .nav-link{
 
 footer .nav-link:hover{
     color: var(--naranja);
-    text-transform: uppercase;
 }
 
 .fab{
