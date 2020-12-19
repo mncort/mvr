@@ -76,7 +76,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 .carousel-item img{
     height: 100vh;
-    object-fit: none;
+    object-fit: cover;
 }
 /*----FIN SLIDE----*/
 
