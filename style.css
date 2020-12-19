@@ -148,5 +148,12 @@ footer .nav-link:hover{
     color: var(--naranja);
 
 }
+.fas{
+    font-size: 1.5rem;
+}
+
+footer p{
+    display: inline;
+}
 
 /*----FIN FOOTER----*/
