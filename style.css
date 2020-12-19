@@ -114,14 +114,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     width: 100%;
 }
 .tx-trabajo{
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -ms-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
     opacity: 0;
-    display: none;
-    transition: opacity 5s;
+    position: absolute;
 }
 .tarjeta-trabajo:hover .img-trabajo{
     filter: grayscale(80%) hue-rotate(180deg);
@@ -134,8 +128,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    transition: opacity 5s;
     opacity: 1;
+    transition: opacity 5s;
 }
 /*----FIN TRABAJOS----*/
 
