@@ -78,6 +78,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     height: 100vh;
     object-fit: cover;
 }
+
+
 /*----FIN SLIDE----*/
 
 /*----SERVICIOS----*/
@@ -103,10 +105,38 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 /*----TRABAJOS----*/
 
-.imagen-trabajo{
-    width: 100%;
+.tarjeta-trabajo{
+    position: relative;
+    text-align: center;
 }
 
+.img-trabajo{
+    width: 100%;
+}
+.tx-trabajo{
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    display: none;
+    transition: opacity 5s;
+}
+.tarjeta-trabajo:hover .img-trabajo{
+    filter: grayscale(80%) hue-rotate(180deg);
+    transition: all 2s ease-in-out;
+}
+.tarjeta-trabajo:hover .tx-trabajo{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: opacity 5s;
+    opacity: 1;
+}
 /*----FIN TRABAJOS----*/
 
 /*----CONTACTO----*/
