@@ -68,8 +68,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 /*----SLIDE----*/
 
 .carousel-item img{
-    object-fit: cover;
-    max-height: 35rem;
+    height: 100vh;
+    object-fit: none;
 }
 /*----FIN SLIDE----*/
 
