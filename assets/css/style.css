@@ -1,15 +1,16 @@
-:root {
-  --claro: #323232;
-  --oscuro: #1b1b1b;
-  --palido: #ffe7d0;
-  --naranja: #fc6e20;
-  --blanco: #ffffff;
-}
+/**:root{
+    --claro: #323232;
+    --oscuro: #1b1b1b;
+    --palido: #ffe7d0;
+    --naranja: #fc6e20;
+    --blanco: #ffffff;
 
+}*/
 /**{
     border: solid black 1px;
 }*/
-html, body {
+html html,
+body {
   width: auto !important;
   overflow-x: hidden !important;
   -ms-overflow-style: none;
@@ -25,39 +26,39 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .mibg-oscuro {
-  background-color: var(--oscuro);
+  background-color: #1b1b1b;
 }
 
 .mibg-rosa {
-  background-color: var(--palido);
+  background-color: #ffe7d0;
 }
 
 .mibg-claro {
-  background-color: var(--claro);
+  background-color: #323232;
 }
 
 .tx-claro {
-  color: var(--blanco);
+  color: #ffffff;
 }
 
 /*----NAVBAR----*/
 .navbar-dark .navbar-nav .nav-link {
-  color: var(--blanco);
+  color: #ffffff;
   font-family: "Lato", sans-serif;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: var(--naranja);
+  color: #fc6e20;
 }
 
 .separator {
   text-decoration: none;
   margin: auto;
-  color: var(--naranja);
+  color: #fc6e20;
 }
 
 .navbar-dark .navbar-toggler {
-  border-color: var(--oscuro);
+  border-color: #1b1b1b;
 }
 
 .navbar-toggler:focus {
@@ -120,7 +121,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .tx-trabajo {
   opacity: 0;
   position: absolute;
-  color: var(--blanco);
+  color: #ffffff;
   width: 100%;
   padding: 0 1rem;
 }
@@ -150,12 +151,12 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 .form-control:focus {
   box-shadow: none;
-  border: solid 1px var(--naranja);
+  border: solid 1px #fc6e20;
 }
 
 .btn-contacto {
-  background-color: var(--naranja);
-  color: var(--blanco);
+  background-color: #fc6e20;
+  color: #ffffff;
 }
 
 .btn-contacto:focus {
@@ -165,31 +166,60 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 /*----FIN CONTACTO----*/
 /*----FOOTER----*/
 footer .nav-link {
-  color: var(--blanco);
+  color: #ffffff;
 }
-
 footer .nav-link:hover {
-  color: var(--naranja);
+  color: #fc6e20;
 }
-
-.fab {
-  font-size: 2rem;
-  color: var(--blanco);
-}
-
-.fab:hover {
-  cursor: pointer;
-  color: var(--naranja);
-}
-
-.fas {
-  font-size: 1.5rem;
-}
-
 footer p {
   display: inline;
+  color: #ffffff;
+}
+footer .fab {
+  font-size: 2rem;
+  color: #ffffff;
+}
+footer .fab:hover {
+  cursor: pointer;
+  color: #fc6e20;
+}
+footer .fas {
+  font-size: 1.5rem;
+}
+footer .far {
+  font-size: 1rem;
 }
 
+/* solo css*/
+/*
+footer .nav-link{
+    color: $blanco;
+}
+
+footer .nav-link:hover{
+    color: $naranja;
+}
+
+.fab{
+
+    font-size: 2rem;
+    color: $blanco;
+
+}
+.fab:hover{
+
+    cursor: pointer;
+    color: $naranja;
+
+}
+.fas{
+    font-size: 1.5rem;
+}
+
+footer p{
+    display: inline;
+}
+*/
 /*----FIN FOOTER----*/
 
 /*# sourceMappingURL=style.css.map */
