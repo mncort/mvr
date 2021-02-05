@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 /**:root{
     --claro: #323232;
     --oscuro: #1b1b1b;
@@ -5,6 +8,8 @@
     --naranja: #fc6e20;
     --blanco: #ffffff;
 
+
+    'Quicksand', sans-serif;
 }*/
 /**{
     border: solid black 1px;
@@ -17,12 +22,18 @@ body {
   /* IE */
   scrollbar-width: none;
   scroll-behavior: smooth;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 1px;
   /* Firefox */
 }
 
 html::-webkit-scrollbar, body::-webkit-scrollbar {
   display: none;
   /* Chrome */
+}
+
+.titulo {
+  font-family: "Quicksand", sans-serif;
 }
 
 .mibg-oscuro {
@@ -44,7 +55,6 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 /*----NAVBAR----*/
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff;
-  font-family: "Lato", sans-serif;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
@@ -143,28 +153,184 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 /*----FIN TRABAJOS----*/
-/*----CONTACTO----*/
-.map-contacto {
+/*----NOSOTROS----*/
+.img-nosotros {
   object-fit: cover;
-  width: 100%;
+  width: 80%;
+  margin: auto;
 }
 
-.form-control:focus {
-  box-shadow: none;
-  border: solid 1px #fc6e20;
-}
-
-.btn-contacto {
-  background-color: #fc6e20;
+/*----FIN NOSOTROS----*/
+/*----CONTACTO----*/
+.faqs {
   color: #ffffff;
 }
-
-.btn-contacto:focus {
-  box-shadow: none;
+.faqs ::-webkit-details-marker {
+  float: right;
+  margin-top: 3px;
+  color: #fc6e20;
+}
+.faqs details {
+  margin-top: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.faqs details summary {
+  outline: none;
+}
+.faqs details summary .naranja {
+  color: #fc6e20;
+}
+.faqs details p {
+  font-size: 14px;
+  padding: 10px;
 }
 
+form {
+  text-align: -webkit-center;
+}
+form .btn-contacto {
+  width: 60%;
+  background-color: #fc6e20;
+  color: #ffffff;
+  border-radius: 0px;
+}
+form .btn-contacto:focus {
+  box-shadow: none;
+}
+form .input-per {
+  text-align: left;
+  width: 60%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+form .input-per input {
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  background: #1b1b1b;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+form .input-per label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #ffffff;
+}
+form .input-per label:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #fc6e20;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+form .input-per .content-n {
+  color: #ffffff;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+form .input-per input:focus + .label-n .content-n,
+form .input-per input:valid + .label-n .content-n {
+  transform: translateY(-120%);
+  font-size: 12px;
+  color: #fc6e20;
+}
+form .input-per input:focus + .label-n:after,
+form .input-per input:valid + .label-n:after {
+  transform: translateX(0%);
+}
+form .textarea-per {
+  text-align: left;
+  width: 60%;
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column-reverse;
+}
+form .textarea-per textarea {
+  width: 100%;
+  height: 80%;
+  color: #ffffff;
+  background: #1b1b1b;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+form .textarea-per label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #ffffff;
+}
+form .textarea-per label:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #fc6e20;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+form .textarea-per .content-n {
+  color: #ffffff;
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+form .textarea-per textarea:focus + .label-n .content-n,
+form .textarea-per textarea:valid + .label-n .content-n {
+  transform: translateY(-360%);
+  font-size: 12px;
+  color: #fc6e20;
+}
+form .textarea-per textarea:focus + .label-n:after,
+form .textarea-per textarea:valid + .label-n:after {
+  transform: translateX(0%);
+}
+
+/*
+.form-control:focus{
+    box-shadow: none;
+    border: solid 1px $naranja;
+}
+
+.btn-contacto{
+    background-color: $naranja;
+    color: $blanco;
+}
+
+.btn-contacto:focus{
+    box-shadow: none;
+}
+*/
 /*----FIN CONTACTO----*/
 /*----FOOTER----*/
+footer .map-contacto {
+  object-fit: cover;
+  width: 90%;
+}
 footer .nav-link {
   color: #ffffff;
 }
@@ -190,36 +356,22 @@ footer .far {
   font-size: 1rem;
 }
 
-/* solo css*/
-/*
-footer .nav-link{
-    color: $blanco;
-}
-
-footer .nav-link:hover{
-    color: $naranja;
-}
-
-.fab{
-
-    font-size: 2rem;
-    color: $blanco;
-
-}
-.fab:hover{
-
-    cursor: pointer;
-    color: $naranja;
-
-}
-.fas{
-    font-size: 1.5rem;
-}
-
-footer p{
-    display: inline;
-}
-*/
 /*----FIN FOOTER----*/
+/*---MEDIA---*/
+@media (min-width: 992px) {
+  .chico {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .grande {
+    display: none;
+  }
+
+  form .textarea-per, form .input-per, form .btn-contacto {
+    width: 100%;
+  }
+}
+/*---FIN MEDIA---*/
 
 /*# sourceMappingURL=style.css.map */

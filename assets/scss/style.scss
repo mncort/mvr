@@ -1,4 +1,7 @@
 @import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 /**:root{
     --claro: #323232;
@@ -7,6 +10,8 @@
     --naranja: #fc6e20;
     --blanco: #ffffff;
     
+
+    'Quicksand', sans-serif;
 }*/
 
 /**{
@@ -21,6 +26,8 @@ html, body {
     /* IE */
     scrollbar-width: none;
     scroll-behavior: smooth;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1px;
    
     /* Firefox */ 
 }
@@ -28,7 +35,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
       display: none;
       /* Chrome */ 
 }
-
+.titulo{
+    font-family: 'Quicksand', sans-serif;
+}
 .mibg-oscuro{
     background-color: $oscuro;
 }
@@ -45,7 +54,6 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 /*----NAVBAR----*/
 .navbar-dark .navbar-nav .nav-link {
     color: $blanco;
-    font-family: 'Lato', sans-serif;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover{
@@ -139,13 +147,183 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 /*----FIN TRABAJOS----*/
 
+/*----NOSOTROS----*/
+.img-nosotros{
+    object-fit: cover;
+    width: 80%;
+    margin:auto;
+}
+/*----FIN NOSOTROS----*/
+
 /*----CONTACTO----*/
 
-.map-contacto{
-    object-fit: cover;
-    width: 100%;
+
+ .faqs{
+    color: $blanco;
+    
+    ::-webkit-details-marker{
+        float: right;
+        margin-top: 3px;
+        color: $naranja;
+    }
+    
+    details{
+        margin-top: 10px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        
+        summary{
+            outline: none;
+            .naranja{
+                color: $naranja;
+            }
+        }
+        p{
+            font-size: 14px;
+            padding: 10px;
+        }
+    }   
+ }
+ 
+
+
+
+form{
+    text-align: -webkit-center;
+
+    .btn-contacto{
+        width: 60%;
+        background-color: $naranja;
+        color: $blanco;
+        border-radius: 0px;
+        &:focus{
+            box-shadow: none;
+        }
+    }
+    .input-per{
+        text-align: left;
+        width: 60%;
+        position: relative;
+        height: 50px;
+        overflow: hidden;
+        box-sizing: border-box;
+    
+        input{
+            width: 100%;
+            height: 100%;
+            color: $blanco;
+            background: $oscuro;
+            padding-top: 20px;
+            border: none;
+            outline: none;
+            
+        }
+        label{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            border-bottom: 1px solid $blanco;
+    
+            &:after{
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0px;
+                height: 100%;
+                width: 100%;
+                border-bottom: 3px solid $naranja;   
+                transform: translateX(-100%);
+                transition: all 0.3s ease;   
+            }
+        }
+        .content-n{
+            color: $blanco;
+            position: absolute;
+            bottom: 5px;
+            left: 0px;
+            transition: all 0.3s ease;
+        }
+        input:focus + .label-n .content-n,
+        input:valid + .label-n .content-n{
+            transform: translateY(-120%);
+            font-size: 12px;
+            color: $naranja;
+        }
+        input:focus + .label-n:after, 
+        input:valid + .label-n:after{
+            transform: translateX(0%);
+        }    
+    }
+    
+    .textarea-per{
+        text-align: left;
+        width: 60%;
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column-reverse;
+    
+        textarea{
+            width: 100%;
+            height: 80%;
+            color: $blanco;
+            background: $oscuro;
+            padding-top: 20px;
+            border: none;
+            outline: none;
+            
+        }
+        label{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            border-bottom: 1px solid $blanco;
+    
+            &:after{
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0px;
+                height: 100%;
+                width: 100%;
+                border-bottom: 3px solid $naranja;   
+                transform: translateX(-100%);
+                transition: all 0.3s ease;   
+            }
+        }
+        .content-n{
+            color: $blanco;
+            position: absolute;
+            bottom: 5px;
+            left: 0px;
+            transition: all 0.3s ease;
+        }
+        textarea:focus + .label-n .content-n,
+        textarea:valid + .label-n .content-n{
+            transform: translateY(-360%);
+            font-size: 12px;
+            color: $naranja;
+        }
+        textarea:focus + .label-n:after, 
+        textarea:valid + .label-n:after{
+            transform: translateX(0%);
+        }
+        
+    }
 }
 
+
+
+/*
 .form-control:focus{
     box-shadow: none;
     border: solid 1px $naranja;
@@ -159,12 +337,17 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .btn-contacto:focus{
     box-shadow: none;
 }
-
+*/
 /*----FIN CONTACTO----*/
 
 /*----FOOTER----*/
 
 footer{
+
+    .map-contacto{
+        object-fit: cover;
+        width: 90%;
+    }
 
     .nav-link{
 
@@ -196,35 +379,24 @@ footer{
     }
 }
 
-
-/* solo css*/
-/*
-footer .nav-link{
-    color: $blanco;
-}
-
-footer .nav-link:hover{
-    color: $naranja;
-}
-
-.fab{
-
-    font-size: 2rem;
-    color: $blanco;
-
-}
-.fab:hover{
-
-    cursor: pointer;
-    color: $naranja;
-
-}
-.fas{
-    font-size: 1.5rem;
-}
-
-footer p{
-    display: inline;
-}
-*/
 /*----FIN FOOTER----*/
+
+/*---MEDIA---*/
+
+@media (min-width: 992px){
+    .chico {
+        display: none;
+    }
+}
+@media (max-width: 991px){
+    .grande {
+        display: none;
+    }
+    form{
+        .textarea-per, .input-per, .btn-contacto{
+            width: 100%;
+        }
+    }
+}
+
+/*---FIN MEDIA---*/
